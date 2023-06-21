@@ -11,6 +11,7 @@ from .globals import request
 if t.TYPE_CHECKING:  # pragma: no cover
     from .app import Flask
 
+# Logging is important
 
 @LocalProxy
 def wsgi_errors_stream() -> t.TextIO:
