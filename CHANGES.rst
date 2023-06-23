@@ -1,3 +1,8 @@
+Version 2.2.4
+-------------
+This is a change of version
+
+
 Version 2.3.3
 -------------
 
@@ -11,7 +16,7 @@ Unreleased
 Version 2.3.2
 -------------
 
-Released 2023-05-01
+Released 2023-05-06
 
 -   Set ``Vary: Cookie`` header when the session is accessed, modified, or refreshed.
 -   Update Werkzeug requirement to >=2.3.3 to apply recent bug fixes.
