@@ -10,6 +10,7 @@ def calc_income():
 	ira_deduction 			= 10000
 	student_loan_interest 	= 4000
 	
+	# should pick this up
 	calc_interest( 100000 ,.01)
 
 	income = ( gross_wages +
