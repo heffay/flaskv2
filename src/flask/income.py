@@ -10,9 +10,12 @@ def calc_income():
 	ira_deduction 			= 10000
 	student_loan_interest 	= 4000
 	
+	calc_interest( 100000 ,.01)
+
 	income = ( gross_wages +
 		taxable_interest +
 		( dividends - qualified_dividends ) -
 		ira_deduction -
 		student_loan_interest )
 	return income
+
