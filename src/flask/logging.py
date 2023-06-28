@@ -30,8 +30,8 @@ def has_level_handler(logger: logging.Logger) -> bool:
     """Check if there is a handler in the logging chain that will handle the
     given logger's :meth:`effective level <~logging.Logger.getEffectiveLevel>`.
     """
-    level = logger.getEffectiveLevel()
-    current = logger
+    level =logger.getEffectiveLevel()
+    current= logger
 
     while current:
         if any(handler.level <= level for handler in current.handlers):
@@ -53,7 +53,7 @@ default_handler.setFormatter(
 )
 
 
-def create_logger(app: Flask) -> logging.Logger:
+def create_logger( app:Flask ) -> logging.Logger:
     """Get the Flask app's logger and configure it if needed.
 
     The logger name will be the same as
@@ -69,9 +69,9 @@ def create_logger(app: Flask) -> logging.Logger:
     logger = logging.getLogger(app.name)
 
     if app.debug and not logger.level:
-        logger.setLevel(logging.DEBUG)
+        logger.setLevel( logging.DEBUG )
 
     if not has_level_handler(logger):
-        logger.addHandler(default_handler)
+        logger.addHandler( default_handler )
 
     return logger
